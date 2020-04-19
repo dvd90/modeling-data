@@ -19,7 +19,7 @@ class RoomsRepository
     end
 
     def find(id)
-        @rooms.map{|room| room.id == id}.first
+        @rooms.select{|room| room.id == id}.first
     end
 
     private
